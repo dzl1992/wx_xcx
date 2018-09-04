@@ -1,0 +1,194 @@
+/* pages/czsq/czsq.wxss */
+page {
+  width: 100%;
+  height: 100%;
+  background-color: #f7f6fc;
+ }
+ .content {
+  width: 100%;
+  height: 100%;
+ }
+.cot_top {
+  width: 100%;
+  height: auto;
+}
+.top_index:first-child {
+  margin-top: 32rpx;
+  border-top: 1rpx solid #e0e0e0;
+}
+.top_index {
+  position: relative;
+  border-bottom: 1rpx solid #e0e0e0;
+  width: 100%;
+  height: auto;
+  background-color: #fff;
+}
+.top_index > label, .top_index > input {
+  display: inline-block;
+  height: 96rpx;
+  line-height: 96rpx;
+  font-size: 28rpx;
+  color: #333;
+}
+.top_index > label {
+  position: absolute;
+  left: 32rpx;
+}
+.top_index > input {
+  width: 600rpx;
+  margin-left: 120rpx;
+}
+.top_index > textarea {
+  padding-top: 20rpx;
+  display: inline-block;
+  min-height: 80rpx;
+  line-height: 50rpx;
+  width: 540rpx;
+  margin-left: 180rpx;
+  font-size: 28rpx;
+  color: #333;
+  overflow-y: hidden;
+  white-space: normal;
+  word-break:break-all;
+}
+::-webkit-scrollbar {  
+  width: 0;  
+  height: 0;  
+  color: transparent;  
+}  
+.content > button {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+.cot_cen {
+  width: 100%;
+  height: auto;
+  margin-top: 64rpx;
+}
+.cot_cen_top {
+  width: 100%;
+  height: 60rpx;
+  padding-left: 32rpx;
+  position: relative;
+}
+.cot_cen_top > view {
+  width: 40rpx;
+  height: 40rpx;
+  display: inline-block;
+  margin-right: 16rpx;
+}
+.cot_cen_top > view > image {
+  width: 100%;
+  height: 100%;
+}
+.cot_cen_top > text {
+  font-size: 30rpx;
+  position: absolute;
+}         
+.con_cen_cen {
+  width: 100%;
+  height: 320rpx;
+  background-color: #fff;
+  border-top: 1rpx solid #e0e0e0;
+  border-bottom: 1rpx solid #e0e0e0;
+}
+.con_cen_cen > checkbox-group {
+  width: 100%;
+  height: 100%;
+  padding-left: 60rpx;
+  padding-top: 20rpx;
+}
+checkbox-group > label {
+  display: inline-block;
+  width: 50%;
+  text-align: left;
+  margin-top: 30rpx;
+  font-size: 28rpx; 
+}
+checkbox-group > label > checkbox {
+  zoom: 60%;
+  float: left;
+}
+.cot_foot {
+  width: 100%;
+  height: auto;
+  margin-top: 64rpx;
+  margin-bottom: 100rpx;
+}  
+.cot_foot_top {
+  width: 100%;
+  height: 40rpx;
+  padding-left: 32rpx;
+}
+.cot_foot_top > image {
+  width: 32rpx;
+  height: 32rpx;
+}
+.cot_foot_top > text {
+  font-size: 30rpx;
+}
+.btn {
+  position: fixed;
+  bottom: 100rpx;
+  left: 4.5%;
+  width: 91.11%;
+}
+.cot_foot_cen {
+  width: 100%;
+  height: auto;
+  line-height: 100rpx;
+  background-color: #fff;
+  margin-top: 20rpx;
+  padding-left: 32rpx;
+  position: relative;
+}
+.tj_img {
+  width: 148rpx;
+  height: 148rpx;
+  margin-top: 20rpx;
+}
+.photo {
+  width: auto;
+  height: auto;
+  display: inline-block;
+}
+.photoZp {
+  display: inline-block;
+  width: 148rpx;
+  height: 148rpx;
+  margin-top: 20rpx;  
+  margin-right: 16rpx;
+  position: relative;
+}
+.img { 
+  width: 100%;
+  height: 100%;
+}
+.close {
+  position: absolute;
+  width: 32rpx;
+  height: 32rpx;
+  border-radius: 50rpx;
+  top: -16rpx;
+  right: -16rpx;
+}
+.cot_down {
+  width: 100%;
+  height: auto;
+  background-color: #fff;
+  border-top: 1rpx solid #e0e0e0;
+}
+.down_index {
+  width: 100%;
+  height: 96rpx;
+  border-bottom: 1rpx solid #e0e0e0;
+  padding-left: 32rpx;
+}
+.down_index > label, .down_index > view {
+  font-size: 28rpx;
+  display: inline-block;
+  width: auto;
+  height: 100%;
+  line-height: 96rpx;
+}

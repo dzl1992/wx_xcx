@@ -1,0 +1,108 @@
+/* pages/sjdp/sjdp.wxss */
+page {
+  width: 100%;
+  height: 100%;
+  background-color: #f7f6fc;
+}
+.content {
+  width: 100%;
+  height: 100%;
+}
+.top {
+  width: 71.11%;
+  height: 80rpx;
+  background-color: #fff;
+  margin: 48rpx 0rpx 48rpx 32rpx;
+  position: relative;
+  border: 1rpx solid #e0e0e0;
+  display: inline-block;
+}
+.search {
+  font-size: 28rpx;
+  width: 15%;
+  height: 80rpx;
+  text-align: center;
+  line-height: 80rpx;
+  background-color: #fff;
+  float: right;
+  margin-top: 48rpx;
+  margin-right: 32rpx;
+  border-radius: 20rpx;
+}
+.top > image {
+  width: 70rpx;
+  height: 70rpx;
+  position: absolute;
+  top: 5rpx;
+}
+.top > input {
+  width: 88%;
+  height: 100%;
+  margin-left: 80rpx;
+  font-size: 28rpx;
+}
+.cent {
+  width: 100%;
+  height: auto;
+  margin-top: 48rpx;
+}
+.cent_top {
+  width: 94%;
+  height: 40rpx;
+  padding-left: 5%;
+}
+.top_index {
+  display: inline-block;
+  margin-right: 16rpx;
+}
+.top_index > view {
+  width: 28rpx;
+  height: 28rpx;
+  border-radius: 50%;
+  display: inline-block;
+}
+.yes {
+  background-color: #3ad61d;
+}
+.no {
+  background-color: #ffb321;
+}
+.top_index > text {
+  font-size: 28rpx;
+  margin-left: 16rpx;
+}
+.cen_cen {
+  width: 100%;
+  height: auto;
+  padding-bottom: 50rpx;
+}
+.canvas {
+    width: 50%;
+    height: 340rpx;
+    display: inline-block; 
+    position: relative;
+}
+canvas {
+  width:100%;
+  height:100%;
+  display:block;
+}
+
+.canvas > text {
+  display: block;
+  font-size: 28rpx;
+  color: #333;
+  width: 100%;
+  text-align: center;
+}
+.cen_cen > image {
+  width: 146rpx;
+  height: 106rpx;
+  margin-top: 146rpx;
+  margin-left: 42%;
+}
+.No_nr {
+  font-size: 28rpx;
+  color: #ccc;
+  text-align: center;
+}

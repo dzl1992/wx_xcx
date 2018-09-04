@@ -1,0 +1,370 @@
+<view class='content'>
+  <view class='content0' id='j_page'>
+    <view class='cot'>
+      <!--进度条  -->
+      <view class='steps'>
+        <view class='first'>
+          <image class='first_box' src='../images/steps_wc.png'></image>
+          <view class='first_line'></view>
+        </view>
+        <view class='Second'>
+        <!--第二步 成功  -->
+          <view hidden='{{Second21_hid}}'>
+            <image class='Second_box22' src='../images/steps_wc.png'></image>
+            <view class='Second_line21'></view>
+          </view>
+          <!--第二步 确认中 (社工和锁匠）  -->
+          <view hidden='{{Second22_hid}}'>
+            <image class='Second_box22' src='../images/steps_jxz.png'></image>
+          </view>
+          <!--第二步 确认中 (经纪人）   -->
+          <view hidden='{{Second_jjr_hid}}'>
+            <image class='Second_box22' src='../images/steps_jxz.png'></image>
+          </view>
+          <!-- 第二步 失败 (经纪人和锁匠）  -->
+          <view hidden='{{Second_sb_hid}}'>
+            <image class='Second_box22' src='../images/bz_sb.png'></image>
+          </view>
+          <!-- 第二步 失败（社工 重新上报）  -->
+          <view hidden='{{Second_sb_sg_hid}}'>
+            <image class='Second_box22' src='../images/bz_sb.png'></image>
+          </view>
+        </view>
+        <!--第三步  -->
+        <view class='Third' style='height:{{Third_height}}'>
+          <!-- 第三步 进行中 （锁匠接单）  -->
+          <view hidden='{{Third21_hid}}'>
+            <image class='Second_box22' src='../images/steps_jxz.png'></image>
+          </view>
+          <!--第三步 进行中 （经纪人和社工 查看）  -->
+          <view hidden='{{Third_ck_hid}}'>
+            <image class='Second_box22' src='../images/steps_jxz.png'></image>
+          </view>
+          <!-- 第三步 成功  -->
+          <view hidden='{{Third_cg_hid}}'>
+            <image class='Second_box22' src='../images/steps_wc.png'></image>
+            <view class='Third_line21'></view>
+          </view>
+        </view> 
+        <!--第四步  -->
+        <view class='Fourth' style='height:{{Fourth_height}}'>
+        <!--第四步 进行中（经纪人反馈）  -->
+          <view hidden='{{Fourth_jjrQr_hid}}'>
+            <image class='Second_box22' src='../images/steps_jxz.png'></image>
+          </view>
+          <!--第四步进行中 （社工查看）  -->
+          <view hidden='{{Fourth_ck_hid}}'>
+            <image class='Second_box22' src='../images/steps_jxz.png'></image>
+          </view>
+          <!--第四步 成功  -->
+          <view hidden='{{Fourth_Yes_hid}}'>
+            <image class='Second_box22' src='../images/steps_wc.png'></image>
+          </view>
+          <!--第四步失败   -->
+          <view hidden='{{Fourth_No_hid}}'>
+            <image class='Second_box22' src='../images/bz_sb.png'></image>
+          </view>
+        </view>
+      </view>
+      <!--进度条对应内容  -->
+      <view class='cot0_top'>
+        <view class='cot_first'>
+          <view class='tit'>
+            <view class='green'>社工上报</view>
+            <text>{{obj.createTime}}</text>
+          </view>
+          <view class='top_index'>
+            <label>房东：</label>
+            <input disabled='true' value="{{obj.landlordName}}"></input>
+          </view>
+          <view class='top_index phone'>
+            <label>手机：</label>
+            <input type='number' disabled='true' value="{{obj.landlordPhone}}"></input>
+            <image src='../images/phone.png' bindtap='Call'></image>
+          </view>
+          <view class='top_index'>
+            <label>房屋位置：</label>
+            <input disabled='{{xgfalse}}' bindinput='xgaddress' placeholder='请输入正确的房屋位置' class='address' value='{{obj.address}}'></input >
+            <image bindtap='XgAddress' class='bj' src='../images/bj.png'></image>
+          </view>
+          <view class='top_index'>
+            <label>过道锁：</label>
+            <input disabled='{{xgfalse}}' bindinput='xggds' class='suo' value='{{obj.hallwayLock}}'></input>
+          </view>
+          <view class='top_index'>
+            <label>入户锁：</label>
+            <input disabled='{{xgfalse}}' bindinput='xgrhs' class='suo' value='{{obj.doorLock}}'></input>
+          </view>
+          <text bindtap='XG_qd' hidden='{{xgfalse}}' class='XGblue'>确定</text>
+        </view>
+        <!--内容第二步 房东确认  -->
+        <view class='cot_Second'>
+          <!--第二步 确认中 (社工和锁匠）  -->
+          <view hidden='{{Second22_hid}}'>
+            <view class='tit'>
+              <view class='blue'>房东确认</view>
+            </view>
+            <view class='queren'>信息确认中...</view>
+          </view>
+          <!--第二步 确认中 (经纪人）  -->
+          <view hidden='{{Second_jjr_hid}}'>
+            <view class='tit'>
+              <view class='blue'>房东确认</view>
+            </view>
+            <view class='cen_foot'>
+              <radio-group name="radio-group" bindchange="radioChange">
+                <label>
+                  <radio value="1"/>
+                  <text>成功</text>
+                </label>
+                <label>
+                  <radio value="0"/>
+                  <text>失败</text>
+                </label>
+              </radio-group>
+            </view>
+          </view>
+          <!--第二步 成功  -->
+          <view hidden='{{Second21_hid}}'>
+            <view class='tit'>
+              <view class='green'>房东确认</view>
+              <text>2018.06.15 08:00</text>
+            </view>
+            <view class='queren'>信息确认</view>
+          </view>
+          <!--第二步 失败 经纪人和锁匠  -->
+          <view hidden='{{Second_sb_hid}}'>
+            <view class='tit'>
+              <view class='red'>房东确认</view>
+              <text>2018.06.15 08:00</text>
+            </view>
+            <view class='queren'>房东信息错误，等待重新上报中</view>
+          </view>
+          <!--第二步 失败 社工重新上报  -->
+          <view hidden='{{Second_sb_sg_hid}}'>
+            <view class='tit'>
+              <view class='red'>房东确认</view>
+              <text>2018.06.15 08:00</text>
+            </view>
+            <view class='queren'>房东信息错误</view>
+            <button class='sb_cxsb' type='primary'>重新上报</button>
+          </view>
+        </view>
+        <view class='cot_Thired'>
+          <!-- 第三步 进行中 （锁匠接单）  -->
+          <view hidden='{{Third21_hid}}'>
+            <view class='tit'>
+              <view class='blue'>锁匠接单</view>
+            </view>
+          </view>
+          <!--第三步 进行中 （经纪人社工查看）  -->
+          <view hidden='{{Third_ck_hid}}'>
+            <view class='tit'>
+              <view class='blue'>锁匠接单</view>
+            </view>
+            <view class='queren'>锁匠接单中</view>
+          </view>
+          <!--第三步 成功  -->
+          <view hidden='{{Third_cg_hid}}'>
+            <view class='tit'>
+              <view class='green'>锁匠接单</view>
+            </view>
+            <view class='queren_index'>
+              <label>房东：</label>
+              <text>{{obj.locksmithSysName}}</text>
+            </view>
+            <view class='queren_index'>
+              <label>手机：</label>
+              <text>{{obj.locksmithSysMobile}}</text>
+              <image src='../images/phone.png'></image>
+            </view>
+          </view>
+        </view>
+        <!--第四步  -->
+        <view class='cot_Fourth'>
+          <!--第四步 进行中（经纪人反馈）  -->
+          <view hidden='{{Fourth_jjrQr_hid}}'>
+            <view class='tit'>
+              <view class='blue'>经纪人反馈</view>
+            </view>
+            <view class='cen_foot'>
+              <radio-group name="radio-group" bindchange="Fourth_radioChange">
+                <label>
+                  <radio value="1"/>
+                  <text>通过</text>
+                </label>
+                <label>
+                  <radio value="0"/>
+                  <text>驳回</text>
+                </label>
+              </radio-group>
+            </view>
+          </view>
+          <!--第四步 进行中 社工查看  -->
+          <view hidden='{{Fourth_ck_hid}}'>
+            <view class='tit'>
+              <view class='blue'>经纪人反馈</view>
+            </view>
+            <view class='queren'>信息确认中</view>
+          </view>
+          <!--第四步 成功  -->
+          <view hidden='{{Fourth_Yes_hid}}'>
+            <view class='tit'>
+              <view class='green'>经纪人反馈</view>
+              <text>2018.06.15 08:00</text>
+            </view>
+            <view class='queren'>信息确认</view>
+          </view>
+          <!--第四步 失败  -->
+          <view hidden='{{Fourth_No_hid}}'>
+            <view class='tit'>
+              <view class='red'>经纪人反馈</view>
+              <text>2018.06.15 08:00</text>
+            </view>
+            <view class='queren_index'>
+              <label>装锁结果：</label>
+              <text>失败</text>
+            </view>
+            <view class='queren_index'>
+              <label>失败原因：</label>
+              <text>门锁不匹配</text>
+            </view>
+            <view class='file_photo'>
+              <!--图片存放处  -->
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <!--衔接第二步 失败原因填写  -->
+    <view class='sbyy' hidden='{{sb_rison}}'>
+      <label>失败原因：</label>
+      <input maxlength="100" bindinput="rison_Xr"></input>
+    </view>
+    <button type='{{type}}' hidden='{{Second_jjr_hid}}' bindtap='fangdongqueren' class='sb_btn'>提交</button>
+    <!--衔接第三步 锁匠接单  -->
+    <view class='suojiang' hidden='{{Third21_hid}}'>
+      <view>
+        <label>锁匠：</label>
+        <input bindinput='suojiang_name'></input>
+      </view>
+      <view>
+        <label>手机：</label>
+        <input value='{{suojiang_phone}}'></input>
+      </view>
+    </view>
+    <button type='{{suojiang_type}}' hidden='{{Third21_hid}}' bindtap='suojiangjiedan' class='sb_btn'>接单</button>
+    <!--衔接第四步 经纪人反馈 选择成功  -->
+    <button type='primary' bindtap='jjrFk_success' hidden='{{Forth_success}}'>提交</button>
+    <!--衔接第四步 经纪人反馈 选择驳回  -->
+    <view class='sbyy forth_sbyy' hidden='{{Forth_file}}'>
+      <label>失败原因：</label>
+      <input maxlength="100" bindinput="jjr_bhyy"></input>
+    </view>
+    <view class='cot_foot' hidden='{{Forth_file}}'>
+      <view class='cot_foot_top'>
+        <image src='../images/xfss.png'></image>
+        <text>失败图片</text>
+      </view>
+      <view class='cot_foot_cen'>
+        <view class='photo'>
+          <block wx:for="{{photo}}" wx:for-item="data"  wx:key="content">
+            <view class='photoZp'>
+              <image class='img' src='{{data.path}}'></image>
+              <image class='close'  data-id='{{data.id}}' bindtap='close' src='../images/close.png'></image>
+            </view>
+          </block>
+          <image class='tj_img' src='../images/tj_img.png'  bindtap='zhaopian'></image>
+        </view>
+      </view>
+    </view>
+    <button type='{{jjr_bhType}}' bindtap='jjr_bh' hidden='{{Forth_file}}'>提交</button>
+  <!-- 经纪人进入未安装页面 -->
+    <!-- <view class='cot0_cen' hidden='{{jjr_Hid}}'>
+      <view class='cen_top'>
+        <image src='../images/fankui.png'></image>
+        <text>反馈</text>
+      </view>
+      <view class='cen_foot'>
+        <view class="lable">装锁结果：</view>
+        <radio-group name="radio-group" bindchange="radioChange">
+          <label>
+            <radio value="1"/>
+            <text>成功</text>
+          </label>
+          <label>
+            <radio value="2"/>
+            <text>失败</text>
+          </label>
+        </radio-group>
+      </view>
+      <view class='sbyy' hidden='{{sb_rison}}'>
+        <label>失败原因：</label>
+        <textarea maxlength="150" bindinput="rison_Xr"></textarea>
+      </view>
+    </view>
+    <view class='cot1_cen' hidden='{{success_hid}}'>
+      <view class='top_index cen_index'>
+        <label>装锁结果：</label>
+        <text>成功</text>
+      </view>
+      <view class='top_index'>
+        <label>装锁时间：</label>
+        <text>{{obj.createTime}}</text>
+      </view>
+    </view>
+    <view class='cot1_cen' hidden='{{fail_hid}}'>
+      <view class='top_index cen_index'>
+        <label>装锁结果：</label>
+        <text>失败</text >
+      </view>
+      <view class='top_index'>
+        <label>失败原因：</label>
+        <text>{{obj.failMessage}}</text>
+      </view>
+    </view> -->
+    <!-- <view class='steps'>
+      <view class='first'>
+        <view class='first_box'>1</view>
+        <text>第一步</text>
+        <view class='first_line'></view>
+      </view>
+      <view class='Second'>
+        <view hidden='{{Second21_hid}}'>
+          <view class='Second_box21'>
+            2
+          </view>
+          <text>第二步</text>
+          <view class='Second_line21'></view>
+        </view>
+        <view class='{{Second22_hid}}'>
+          <view class='Second_box22'>
+            2
+          </view>
+          <text>第二步</text>
+          <view class='Second_line22'></view>
+        </view>
+      </view>
+      <view class='Third'>
+        <view hidden='{{Third21_hid}}'>
+          <view class='Third_box21'>
+            3
+          </view>
+          <text>第三步</text>
+          <view class='Third_line21'></view>
+          <icon class='icon3' type="success" color="green" size='20'/>
+        </view>
+        <view class='{{Third22_hid}}'>
+          <view class='Third_box22'>
+            3
+          </view>
+          <text>第三步</text>
+          <view class='Third_line22'></view>  
+          <icon type="success" class='icon3' color="gray" size='20'/>
+        </view>
+      </view>
+    </view> -->
+    <!-- <button type='{{type}}' bindtap='zsxq_Tj'  hidden='{{jjr_Hid}}'>提交</button> -->
+  </view>
+</view>
+

@@ -1,0 +1,272 @@
+<!--主页.wxml-->
+<view class="container">
+  <view class='header'>
+    <image src='{{currentTabImg}}' mode='aspectFill'></image>
+  </view>
+  <view class='swiper'>
+    <view class="swiper-tab {{currentTab==0 ? 'swiper-tab-selected1' : ''}}" data-tab-id="0" bindtap="changeSwiperTab">我是租客</view>
+    <view class="swiper-tab {{currentTab==1 ? 'swiper-tab-selected1' : ''}}" data-tab-id="1" bindtap="changeSwiperTab">我是房东</view>
+    <view hidden="{{swipee3_hid}}" class="swiper-tab {{currentTab==2 ? 'swiper-tab-selected1' : ''}}" data-tab-id="2" bindtap="changeSwiperTab">社区管理</view>
+    <view hidden="{{swipee4_hid}}" class="swiper-tab {{currentTab==2 ? 'swiper-tab-selected1' : ''}}" data-tab-id="3" bindtap="changeSwiperTab">投诉上报</view>
+  </view>
+  <swiper current="{{currentTab}}" display-multiple-items="1" class="swiper-box" style="height: {{swiperHeight - (currentTab == 0 ? 50 : 222)}}px;" duration="300" bindchange='swiperBindChange'>
+    <swiper-item class='swiper-box-item'>
+      <view class='aprtment-box' bindtap='zkej'>
+        <view class='aprtment-box-title'>租房情报局</view>
+        <view class='aprtment-box-container'>
+          <view class='aprtment_items'>
+            <image src='../images/house1.jpg' mode='aspectFill'></image>
+            <view>湖墅南路精装修两房</view>
+            <view>
+              <text class='price'>￥5500 元/月</text>
+              <!-- <text class='priceTagLine'>￥1000元/月</text> -->
+            </view>
+          </view>
+          <view class='aprtment_items'>
+            <image src='../images/house2.jpg' mode='aspectFill'></image>
+            <view>府新花园精装三室一厅</view>
+            <view>
+              <text class='price'>￥10000元/月</text>
+              <!-- <text class='priceTagLine'>￥1000元/月</text> -->
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class='split-line'></view>
+      <view class="menu-box-container">
+        <view class='menu-items' bindtap='rzdj'>
+          <view>
+            <image class='menu-items-icon' src='../images/ruzhudengji.png' mode='aspectFill'></image>
+            <view class='menu-items-info'>
+              <view>入住登记</view>
+              <text>网上办理入住登记，随时随地，方便快捷</text>
+            </view>
+          </view>
+          <image src='../images/icon_arrow_right.png' mode='aspectFill'></image>
+        </view>
+        <view class='menu-items' bindtap='XinHZR'>
+          <view>
+            <image class='menu-items-icon' src='../images/wangqianxieyi.png' mode='aspectFill'></image>
+            <view class='menu-items-info'>
+              <view>居住证受理</view>
+              <text>居住证办理，最多跑一次</text>
+            </view>
+          </view>
+          <image src='../images/icon_arrow_right.png' mode='aspectFill'></image>
+        </view>
+        <view class='menu-items kksqF'>
+          <view>
+            <image class='menu-items-icon' src='../images/kaikashenqing.png' mode='aspectFill'></image>
+            <view class='menu-items-info'>
+              <view>开卡申请</view>
+              <text>智能门锁安全高效，申请钥匙，开门便利</text>
+            </view>
+          </view>
+          <image src='../images/icon_arrow_right.png' mode='aspectFill'></image>
+          <button class='kksq' open-type="{{openId ? 'contact':''}}" lang="zh_CN" bindtap='HIdAPP'></button>
+        </view>
+        <view class='menu-items' bindtap='xfxc'>
+          <view> 
+            <image class='menu-items-icon' src='../images/xiaofangxuanchuan.png' mode='aspectFill'></image>
+            <view class='menu-items-info'>
+              <view>消防宣传</view>
+              <text>宣传消防知识，掌握消防技能</text>
+            </view>
+          </view>
+          <image src='../images/icon_arrow_right.png' mode='aspectFill'></image>
+        </view>
+        <view class='menu-items'  bindtap='callPhone'>
+          <view>
+            <image class='menu-items-icon' src='../images/ksbz.png' mode='aspectFill'></image>
+            <view class='menu-items-info'>
+              <view>开锁帮助</view>
+              <text>遇到问题无忧，拨打电话我们替您解决</text>
+            </view>
+          </view>
+          <image src='../images/icon_arrow_right.png' mode='aspectFill'></image>
+        </view>
+      </view>
+    </swiper-item>
+    <swiper-item >
+      <view class="menu-box-container" >
+        <view class='menu-items' bindtap='czsq'>
+          <view>
+            <image class='menu-items-icon' src='../images/chuzushenqing.png' mode='aspectFill'></image>
+            <view class='menu-items-info'>
+              <view>出租申请</view>
+              <text>网上提交出租申请，方便快捷</text>
+            </view>
+          </view>
+          <image src='../images/icon_arrow_right.png' mode='aspectFill'></image>
+        </view>
+        <view class='menu-items' bindtap='aqgd'>
+          <view>
+            <image class='menu-items-icon' src='../images/wangqianxieyi.png' mode='aspectFill'></image>
+            <view class='menu-items-info'>
+              <view>安全规定</view>
+              <text>网签智能门锁，省时省力，便捷高效</text>
+            </view>
+          </view>
+          <image src='../images/icon_arrow_right.png' mode='aspectFill'></image>
+        </view>
+        <view class='menu-items' bindtap='xfaq'>
+          <view>
+            <image class='menu-items-icon' src='../images/xiaofanganquan.png' mode='aspectFill'></image>
+            <view class='menu-items-info'>
+              <view>消防安全</view>
+              <text>进行消防培训，掌握消防技能</text>
+            </view>
+          </view>
+          <image src='../images/icon_arrow_right.png' mode='aspectFill'></image>
+        </view>
+        <view class='menu-items'>
+          <view>
+            <image class='menu-items-icon' src='../images/kaikashenqing.png' mode='aspectFill'></image>
+            <view class='menu-items-info'>
+              <view>器材商城</view>
+              <text>方便购买消防器材，送货上门</text>
+            </view>
+          </view>
+          <image src='../images/icon_arrow_right.png' mode='aspectFill'></image>
+        </view>
+        <view class='menu-items' bindtap='fwwt'>
+          <view>
+            <image class='menu-items-icon' src='../images/fangwuweituo.png' mode='aspectFill'></image>
+            <view class='menu-items-info'>
+              <view>房屋委托</view>
+              <text>省心出租，收益更稳健，房屋有保证</text>
+            </view>
+          </view>
+          <image src='../images/icon_arrow_right.png' mode='aspectFill'></image>
+        </view>
+      </view>
+    </swiper-item>
+    <swiper-item wx:if="{{!swipee3_hid}}">
+      <view class="menu-box-container" >
+        <view class='menu-items' bindtap='zssb'>
+          <view>
+            <image class='menu-items-icon' src='../images/zhuangsuoshangbao.png' mode='aspectFill'></image>
+            <view class='menu-items-info'>
+              <view>装锁上报</view>
+              <text>社工及时上报装锁情况，便于交流沟通</text>
+            </view>
+          </view>
+          <image src='../images/icon_arrow_right.png' mode='aspectFill'></image>
+        </view>
+        <view class='menu-items' bindtap='xfys'>
+          <view>
+            <image class='menu-items-icon' src='../images/xfys.png' mode='aspectFill'></image>
+            <view class='menu-items-info'>
+              <view>消防预审</view>
+              <text>预审员上报出租房消防情况</text>
+            </view>
+          </view>
+          <image src='../images/icon_arrow_right.png' mode='aspectFill'></image>
+        </view>
+        <view class='menu-items' bindtap='sgpm'>
+          <view>
+            <image class='menu-items-icon' src='../images/shegongpaiming.png' mode='aspectFill'></image>
+            <view class='menu-items-info'>
+              <view>社工排名</view>
+              <text>及时了解社工的工作完成量</text>
+            </view>
+          </view>
+          <image src='../images/icon_arrow_right.png' mode='aspectFill'></image>
+        </view>
+        <view class='menu-items' bindtap='ssyj'>
+          <view>
+            <image class='menu-items-icon' src='../images/sanseyujing.png' mode='aspectFill'></image>
+            <view class='menu-items-info'>
+              <view>三色预警</view>
+              <text>及时对出租房的状态进行预警，管理更省心</text>
+            </view>
+          </view>
+          <image src='../images/icon_arrow_right.png' mode='aspectFill'></image>
+        </view>
+        <view class='menu-items' bindtap='sjdp'>
+          <view>
+            <image class='menu-items-icon' src='../images/shujudaping.png' mode='aspectFill'></image>
+            <view class='menu-items-info'>
+              <view>数据大屏</view>
+              <text>对房屋、房客的数据汇总与统计</text>
+            </view>
+          </view>
+          <image src='../images/icon_arrow_right.png' mode='aspectFill'></image>
+        </view>
+      </view>
+    </swiper-item>
+    <swiper-item wx:if="{{!swipee4_hid}}">
+      <view class="menu-box-container" >
+        <view class='menu-items' bindtap='Tousu'>
+          <view>
+            <image class='menu-items-icon' src='../images/tsjy.png' mode='aspectFill'></image>
+            <view class='menu-items-info'>
+              <view>投诉上报</view>
+              <text>您的问题是我们的动力，忠心为您服务</text>
+            </view>
+          </view>
+          <image src='../images/icon_arrow_right.png' mode='aspectFill'></image>
+        </view>
+      </view>
+    </swiper-item>
+  </swiper>
+</view>
+<view bindtap='zkej' style='{{ currentTab == 0 ? "position:absolute; top: 402rpx; right: 32rpx;" : "display:none;" }}'>
+  <image style='width: 84rpx;height:84rpx;' src='../images/search.png' mode='aspectFill'></image>
+</view>
+<view class='model' hidden='{{modelHid}}'>
+  <view class='model_cen'>
+    <view class='titImg'>
+      <image src='../images/tit.png'></image>
+    </view>
+    <view>石桥e家服务台需要调用您的的微信信息（头像，昵称等）,请在下个界面点击
+      <text>“确认授权”</text>
+    </view>
+    <text bindtap='No_UserInfo'>取消</text>
+    <button type='primary' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo">好的</button>
+  </view>
+</view>
+<view class='model model_phone' hidden='{{PhoneHid}}'>
+  <view class='model_cen'>
+    <view class='titImg'>
+      <image src='../images/tit.png'></image>
+    </view>
+    <view>石桥e家服务台需要获取你的手机号码,请在下个界面点击
+      <text>“确认授权”</text>
+    </view>
+    <text bindtap='No_Phone'>取消</text>
+    <button type='primary' open-type="getPhoneNumber" lang="zh_CN" bindgetphonenumber="PhoneInfo">好的</button>
+  </view>
+</view>
+<view class='model' hidden='{{APPHid}}'>
+  <view class='model_cen APP_cen'>
+    <view class='titImg'>
+      <image src='../images/tit.png'></image>
+    </view>
+    <view>小程序要获取您的头像，昵称等信息才可以进行开卡申请操作</view>
+    <text bindtap='Qxkksq'>取消</text>
+    <button type='primary' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo" >好的</button>
+  </view>
+</view> 
+<view class='model' hidden='{{loginHid}}'>
+  <view class='model_cen'>
+    <view class='titImg'>
+      <image src='../images/tit.png'></image>
+    </view>
+    <view>您的身份信息已过期，石桥e家服务台需要重新获取您的手机号码,请在下个界面点击
+      <text>“确认授权”</text>
+    </view>
+    <text bindtap='No_UserInfo'>取消</text>
+    <button type='primary' open-type="getPhoneNumber" lang="zh_CN" bindgetphonenumber="PhoneInfo">好的</button>
+  </view>
+</view>
+<view class='model' hidden='{{SCHid}}'>
+  <view class='model_cen ScM'>
+    <view class='titImg'>
+      <image src='../images/tit.png'></image>
+    </view>
+    <view>小程序要获取您的头像，昵称等信息才可以进行后续操作</view>
+    <text bindtap='Qxkksq'>取消</text>
+    <button type='primary' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo" >好的</button>
+  </view>
+</view> 

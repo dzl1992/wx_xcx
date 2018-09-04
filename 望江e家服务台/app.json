@@ -1,0 +1,57 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/zssb/zssb",
+    "pages/zsxq/zsxq",
+    "pages/sbxx/sbxx",
+    "pages/gr_pm/gr_pm",
+    "pages/rzdj/rzdj",
+    "pages/czsq/czsq",
+    "pages/kksq/kksq",
+    "pages/xfaq/xfaq",
+    "pages/sjdp/sjdp",
+    "pages/ssyj/ssyj",
+    "pages/wode/wode",
+    "pages/xfys/xfys",
+    "pages/tjys/tjys",
+    "pages/ysxq/ysxq",
+    "pages/jzzsl/jzzsl",
+    "pages/aqgd/aqgd",
+    "pages/aqgd/xiaofangyaoqiu",
+    "pages/aqgd/rggd",
+    "pages/aqgd/glgd",
+    "pages/fwwt/fwwt",
+    "pages/xfxc/xfxc",
+    "pages/tssb/tssb"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "安心望江e家服务台",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "selectedColor": "#ff3333",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "pages/images/homeW.png",
+        "selectedIconPath": "pages/images/homeZ.png"
+      },
+      {
+        "pagePath": "pages/wode/wode",
+        "text": "我的",
+        "iconPath": "pages/images/meW.png",
+        "selectedIconPath": "pages/images/meZ.png"
+      }
+    ]
+  },
+  "plugins": {
+    "tencentvideo": {
+      "version": "1.1.1",
+      "provider": "wxa75efa648b60994b"
+    }
+  }
+}

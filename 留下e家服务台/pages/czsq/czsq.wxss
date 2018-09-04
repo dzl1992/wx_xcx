@@ -1,0 +1,114 @@
+/* pages/czsq/czsq.wxss */
+page {
+  width: 100%;
+  height: 100%;
+  background-color: #f7f6fc;
+ }
+.cot0_top {
+  width: 100%;
+  height: 100%;
+}
+.top_index:first-child {
+  margin-top: 32rpx;
+  border-top: 1rpx solid #e0e0e0;
+}
+.top_index {
+  position: relative;
+  border-bottom: 1rpx solid #e0e0e0;
+  width: 100%;
+  height: auto;
+  background-color: #fff;
+}
+.top_index > label, .top_index > input {
+  display: inline-block;
+  height: 96rpx;
+  line-height: 96rpx;
+  font-size: 28rpx;
+  color: #333;
+}
+.top_index > label {
+  position: absolute;
+  left: 32rpx;
+}
+.top_index > input {
+  width: 600rpx;
+  margin-left: 120rpx;
+}
+.sfz > input {
+  margin-left: 150rpx;
+}
+.address > input {
+  margin-left: 170rpx;
+}
+::-webkit-scrollbar {  
+  width: 0;  
+  height: 0;  
+  color: transparent;  
+}  
+.cot0_top > button {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  border-radius: 0rpx;
+  color: #fff;
+}
+.cen {
+  width: 100%;
+  margin-top: 64rpx;
+}
+.cen_top {
+  width: 100%;
+  height: 40rpx;
+  padding-left: 32rpx;
+}
+.cen_top > image {
+  width: 40rpx;
+  height: 40rpx;
+  margin-bottom: -4rpx;
+}
+.cen_top > text {
+  font-size: 30rpx;
+  margin-left: 16rpx;
+}
+.cen_cen {
+  width: 100%;
+  height: 204rpx;
+  line-height: 204rpx;
+  background-color: #fff;
+  margin-top: 20rpx;
+  padding-left: 32rpx;
+  position: relative;
+}
+.tj_img {
+  width: 148rpx;
+  height: 148rpx;
+  margin-top: 20rpx;
+}
+.photo {
+  width: auto;
+  height: auto;
+  display: inline-block;
+}
+.photoZp {
+  display: inline-block;
+  width: 148rpx;
+  height: 148rpx;
+  margin-top: 20rpx;  
+  margin-right: 16rpx;
+  position: relative;
+}
+.img { 
+  width: 100%;
+  height: 100%;
+}
+.close {
+  position: absolute;
+  width: 32rpx;
+  height: 32rpx;
+  border-radius: 50rpx;
+  top: -16rpx;
+  right: -16rpx;
+}
+.foot {
+  margin-bottom: 196rpx;
+}

@@ -1,0 +1,39 @@
+/* pages/aqgd/aqgd.wxss */
+page {
+  width: 100%;
+  height: 100%;
+  background-color: #f7f6fc;
+ }
+.cot0_top {
+  width: 100%;
+  height: auto;
+}
+.top_index:first-child {
+  margin-top: 32rpx;
+  border-top: 1rpx solid #e0e0e0;
+}
+.top_index {
+  position: relative;
+  border-bottom: 1rpx solid #e0e0e0;
+  width: 100%;
+  height: 96rpx;
+  background-color: #fff;
+}
+.top_index > label, .top_index > input {
+  display: inline-block;
+  height: 96rpx;
+  line-height: 96rpx;
+  font-size: 28rpx;
+  color: #333;
+}
+.top_index > label {
+  position: absolute;
+  left: 32rpx;
+}
+.top_index > image {
+  position: absolute;
+  right: 32rpx;
+  top: 24rpx;
+  width: 48rpx;
+  height: 48rpx;
+}

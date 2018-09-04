@@ -1,0 +1,34 @@
+<!--pages/gr_pm/gr_pm.wxml-->
+<view class='content'>
+  <view class='content0' hidden='{{content0_hid}}'>
+    <view class='No_cen'>
+      <image src='../images/No_suo.png'></image>
+      <view>暂无社工信息</view>
+    </view>
+  </view>
+  <view class="section">  
+    <picker mode="date" fields="month"  value="{{date}}" start="1978-01-01" end="2100-1-23" bindchange="bindDateChange">  
+      <view class="picker">  
+        {{dates}}  
+      </view>
+       <image src='../images/jt_x.png'></image>   
+    </picker>  
+  </view>  
+  <view class='table'>
+    <view class='thead'>
+      <text>排名</text>
+      <text>社工</text>
+      <text>装锁数量</text>
+    </view>
+  </view>
+  <view class='tbody'>
+    <block wx:for="{{shequ}}" wx:for-item="data"  wx:key="content" >
+      <view class='tbody_tr'  data-id='{{data.id}}'>
+          <text>{{data.uid + 1}}</text>
+          <text>{{data.username}}</text>
+          <text>{{data.lockNumber}}</text>
+          <!-- <image src='../images/icon_arrow_right.png'></image> -->
+      </view>
+    </block>
+  </view>
+</view>

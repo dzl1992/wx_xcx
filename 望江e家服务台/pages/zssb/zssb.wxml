@@ -1,0 +1,28 @@
+<!--pages/zssb/zssb.wxml-->
+<view class='content'>
+  <view class='content0' hidden='{{content0_hid}}'>
+    <view class='No_cen'>
+      <image src='../images/No_suo.png'></image>
+      <view>暂无装锁信息</view>
+    </view>
+  </view>
+  <view class='content1' hidden='{{content1_hid}}'>
+    <block wx:for="{{Suo_xq}}" wx:for-item="data"  wx:key="content" >
+      <view class='cen_index' bindtap='zsxq' data-id='{{data.id}}'>
+        <view class='left'>
+          <image wx:if="{{data.status == 0 || data.status == 10 || data.status == 11 || data.status == 20 }}" class='touxiang' src="../images/0.png"></image>
+          <image wx:elif="{{data.status == 1 || data.status == 30 }}" class='touxiang' src="../images/1.png"></image>
+          <image wx:else="{{data.status == 2 || data.status == 31 }}" class='touxiang' src="../images/2.png"></image>
+        </view>
+         <view class='right'>
+            <view class='house'>{{data.address}}</view>
+            <text class='name'>{{data.landlordName}}</text>
+            <text class='phone'>{{data.landlordPhone}}</text>
+            <view class='time'>{{data.applyTime}}</view>
+            <view class='resion'>{{data.failMessage}}</view>
+        </view> 
+      </view>
+    </block>
+  </view>
+  <button class='btn' type='primary' bindtap='sbxx'>上报</button>
+</view>

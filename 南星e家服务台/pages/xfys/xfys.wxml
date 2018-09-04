@@ -1,0 +1,25 @@
+<!--pages/xfys/xfys.wxml-->
+<view class='content'>
+  <view class='content0' hidden='{{content0_hid}}'>
+    <view class='No_cen'>
+      <image src='../images/No_suo.png'></image>
+      <view>暂无装锁信息</view>
+    </view>
+  </view>
+  <view class='content1' hidden='{{content1_hid}}'>
+    <block wx:for="{{ys_Arr}}" wx:for-item="data"  wx:key="content" >
+      <view class='cen_index' bindtap='ysxq' data-id='{{data.id}}'>
+        <view class='left'>
+          <image class='touxiang' src="../images/xfys_{{data.status}}.png"></image>
+        </view>
+         <view class='right'>
+            <view class='house'>{{data.address}}</view>
+            <text>{{data.landlordName}}</text>
+            <text class='phone'>{{data.landlordPhone}}</text>
+            <view class='time'>{{data.createTime}}</view>
+        </view> 
+      </view>
+    </block>
+  </view>
+  <button class='btn' type='primary' bindtap='tjys'>添加</button>
+</view>

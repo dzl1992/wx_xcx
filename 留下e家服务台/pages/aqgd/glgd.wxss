@@ -1,0 +1,18 @@
+/* pages/aqgd/glgd.wxss */
+page {
+  width: 100%;
+  height: 100%;
+}
+.title {
+  font-size: 34rpx;
+  width: 440rpx;
+  height: auto;
+  margin: 0 auto;
+  font-weight: bold;
+}
+.cen {
+  font-size: 28rpx;
+  width: 90%;
+  height: auto;
+  margin: 20rpx auto;
+}

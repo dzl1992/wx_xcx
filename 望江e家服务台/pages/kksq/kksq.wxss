@@ -1,0 +1,39 @@
+/* pages/kksq/kksq.wxss */
+page {
+  width: 100%;
+  height: 100%;
+  background-color: #f7f6fc;
+ }
+.content {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.content > image {
+  width: 100%;
+  height: 100%;
+}
+.and {
+  position: absolute;
+  width: 100%;
+  height: 10%;
+  top: 472rpx;
+}
+.ios {
+  position: absolute;
+  width: 100%;
+  height: 10%;
+  top: 650rpx;
+}
+.and_ewm {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  text-align: center;
+}
+.and_ewm > image {
+  margin-top: 30%;
+}

@@ -1,0 +1,5 @@
+<!--pages/xfxc/xfxc.wxml-->
+<!-- <view class="pageView">
+   <txv-video class='video' vid="a0323w0u5hk" playerid="txv1" autoplay="{{true}}"></txv-video>
+</view> -->
+<txv-video class='video' vid="a0323w0u5hk" playerid="txv1" autoplay="{{true}}"></txv-video>

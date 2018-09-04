@@ -1,0 +1,48 @@
+<!--pages/czsq/czsq.wxml-->
+<form bindsubmit='formSubmit'>
+  <view class='cot0_top'>
+    <view class='top_index'>
+      <label>姓名：</label>
+      <input name="name"></input>
+    </view>
+    <view class='top_index sfz'>
+      <label>身份证：</label>
+      <input name="idCard"></input>
+    </view>
+    <view class='top_index phone'>
+      <label>手机：</label>
+      <input name="phone"></input>
+    </view>
+    <view class='top_index address'>
+      <label>房屋位置：</label>
+      <input placeholder='例：xxxx小区xx幢xx单元xxx室' style='margin-left: 170rpx;width: 72%' name="address" auto-height='true'></input>
+    </view>
+    <button formType="submit" type='{{type}}'>提交</button>
+  </view>
+</form>
+
+<!-- <view class='cen foot'>
+  <view class='cen_top'>
+    <image src='../images/mgz.png'></image>
+    <text>个人照片</text>
+  </view>
+  <view class='cen_cen'>
+    <view class='photo'>
+    <block wx:for="{{mgz}}" wx:for-item="data"  wx:key="content">
+      <view class='photoZp'>
+        <image class='img' src='{{data.path}}'></image>
+        <image class='close'  data-id='{{data.id}}' bindtap='close_mgz' src='../images/close.png'></image>
+      </view>
+    </block>
+  </view>
+    <image class='tj_img' src='../images/tj_img.png'  bindtap='mgz_ly'></image>
+  </view>
+</view> -->
+<!--免冠照  -->
+<action-sheet hidden="{{Mgz_Hidden}}" bindchange="Mgz_ActionSheet" >
+    <block  wx:for="{{list}}" wx:for-item="data"  wx:key="content"> 
+        <action-sheet-item data-id='{{data.id}}' bindtap="mgz_ly" >{{data.tit}}</action-sheet-item>
+    </block>
+    <!--自动隐藏action-sheet-->
+    <action-sheet-cancel>取消</action-sheet-cancel>
+</action-sheet>

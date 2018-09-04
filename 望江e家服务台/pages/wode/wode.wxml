@@ -1,0 +1,22 @@
+<!--pages/wode/wode.wxml-->
+<view class='entry'>
+  <view class='top'>
+    <image class='beijing' src='../images/weituo.jpg'></image>
+    <image class='touxiang' src='{{url}}'></image>
+     <view class='dlzc'>
+      <button wx:if="{{!phone}}" open-type="getPhoneNumber" lang="zh_CN" bindgetphonenumber="PhoneInfo">登 录</button>
+      <view wx:if="{{phone}}">{{phone}}</view>
+    </view> 
+  </view>
+  <view class='center'>
+    <view class='wdsc' bindtap='wdsc'>
+      <image src='../images/stare.png'></image>
+      <view>我的消息</view>
+    </view>
+    <!-- <view class='kf' bindtap='callPhone'>
+      <image src='../images/kefu.png'></image>
+      <view>客服</view>
+      <text>0571-81204125</text>
+    </view> -->
+  </view>
+</view>

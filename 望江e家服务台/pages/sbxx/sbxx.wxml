@@ -1,0 +1,30 @@
+<!--pages/sbxx/sbxx.wxml-->
+<form bindsubmit="formSubmit" class='cot0_top'>
+  <view class='top_index'>
+    <label>房东：</label>
+    <input name="landlordName" value='{{form.name}}' placeholder='请填写姓名'></input>
+  </view>
+  <view class='top_index phone'>
+    <label>手机：</label>
+    <input name="landlordPhone" value='{{form.tel}}' placeholder='请填写手机号' type='number'></input>
+  </view>
+  <view class='top_index address'>
+    <label>房屋位置：</label>
+    <input placeholder='例：xx小区xx幢xx单元xxx室' style='margin-left: 170rpx;width: 72%' name="address" auto-height='true'></input>
+  </view>
+  <view class='top_index suo'>
+    <label>入户锁：</label>
+    <input name="doorLock" placeholder='请填写入户锁数量' placeholder-style='font-size: 14px' type='number'></input>
+    <text>把</text>
+  </view>
+  <view class='top_index suo'>
+    <label>过道锁：</label>
+    <input name="hallwayLock" placeholder='请填写过道锁数量' placeholder-style='font-size: 14px' type='number' bindinput='gd_suo'></input>
+    <text>把</text>
+  </view>
+  <view class='top_index bz'>
+    <label>备注：</label>
+    <input name="remark" placeholder='其他备注信息' auto-height='true'></input>
+  </view>
+  <button type='{{type}}' formType="submit">提交</button>
+</form>

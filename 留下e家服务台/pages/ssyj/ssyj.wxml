@@ -1,0 +1,37 @@
+<!--pages/ssyj/ssyj.wxml-->
+<view class='content'>
+  <view class='top'>
+    <image src='../images/B_search.png'></image>
+    <input></input>
+  </view>
+  <view class='cent'>
+    <view class='cent_top'>
+      <view class='top_index'>
+        <image src='../images/zc_small.png'></image>
+        <text>正常</text>
+      </view>
+      <view class='top_index'>
+        <image src='../images/yj_small.png'></image>
+        <text>预警</text>
+      </view>
+      <view class='top_index'>
+        <image src='../images/yc_small.png'></image>
+        <text>异常</text>
+      </view>
+    </view>
+    <view class='cen_cen cen_cen1' hidden='{{Yes_hid}}'>
+      <block wx:for="{{house}}" wx:for-item="data"  wx:key="content" >
+        <view class='house'>
+          <view wx:if="{{data.Type == 0}}"><image src='../images/zc_bug.png'></image></view>
+          <view wx:elif="{{data.Type == 1}}"><image src='../images/yj_bug.png'></image></view>
+          <view wx:else><image src='../images/yc_bug.png'></image></view>
+          <text>{{data.name}}</text>
+        </view>
+      </block> 
+    </view>
+    <view class='cen_cen' hidden='{{NO_hid}}'>
+      <image src='../images/No_w.png'></image>
+      <view class='No_nr'>没有相关内容</view>
+    </view>
+  </view>
+</view>

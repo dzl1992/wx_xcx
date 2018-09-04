@@ -1,0 +1,117 @@
+<!--pages/rzdj/rzdj.wxml-->
+<form bindsubmit="formSubmit">
+  <view class='cotent'>
+    <view class='top'>
+      <view class='top_index'>
+        <label>姓名：</label>
+        <input name="name"></input>
+      </view>
+      <view class='top_index phone'>
+        <label>籍贯：</label>
+        <picker name="nativePlace" mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+          <view class="picker">
+            {{region[0]}}，{{region[1]}}，{{region[2]}}
+          </view>
+        </picker>
+      </view>
+      <view class='top_index'>
+        <label>民族：</label>
+         <picker bindchange="bindPickerChange" name="nation" value="{{array[index]}}" range="{{array}}">
+          <view class="picker">
+            {{array[index]}}
+          </view>
+        </picker> 
+      </view>
+      <view class='top_index sfz'>
+        <label>身份证：</label>
+        <input name="idCard"></input>
+      </view>
+      <view class='top_index'>
+        <label>手机：</label>
+        <input name="phone" type='number'></input>
+      </view>
+      <view class='top_index'>
+        <label>婚姻状态：</label>
+        <radio-group class="radio-group" name="maritalStatus" bindchange="radioChange">
+          <label class="radio" wx:for="{{items}}" wx:key="item">
+            <radio value="{{item.name}}" checked="{{item.checked}}"/>
+            <text>{{item.value}}</text>
+          </label>
+        </radio-group>
+      </view>
+      <view class='top_index'>
+        <label>工作单位：</label>
+        <input class='address' name="compay" style='margin-left: 170rpx;width: 70%' auto-height='true'></input>
+      </view>
+      <view class='top_index bz' hidden='{{place_hid}}'>
+        <label>租房地址：</label>
+        <input class='address' placeholder='例：xxxx小区xx幢xx单元xxx室' style='margin-left: 170rpx;width: 70%' name="address" auto-height='true'></input>
+      </view>
+    </view>
+    <view class='cen'>
+      <view class='cen_top'>
+        <image src='../images/sfz.png'></image>
+        <text>身份证  （正面）</text>
+      </view>
+      <view class='cen_cen'>
+        <view class='photo'>
+        <block wx:for="{{photo_Z}}" wx:key = "{{item}}">
+          <view class='photoZp'>
+            <image class='img' src='{{item}}' data-id='{{item}}' bindtap='FDimg'></image>
+              <image class='close'  data-id='{{item}}' bindtap='close' src='../images/close.png'></image> 
+          </view>
+        </block>
+      </view>
+        <image class='tj_img' src='../images/tj_img.png'  bindtap='zhaopian'></image>
+      </view>
+    </view>
+    <view class='cen cent'>
+      <view class='cen_top'>
+        <image src='../images/sfz.png'></image>
+        <text>身份证  （反面）</text>
+      </view>
+      <view class='cen_cen'>
+        <view class='photo'>
+        <block wx:for="{{photoB_F}}" wx:key = "{{item}}">
+            <view class='photoZp'>
+              <image class='img' src='{{item}}' data-id='{{item}}' bindtap='FDimg'></image>
+               <image class='close'  data-id='{{item}}' bindtap='close_F' src='../images/close.png'></image> 
+            </view>
+          </block>
+      </view>
+        <image class='tj_img' src='../images/tj_img.png'  bindtap='zhaopian_F'></image>
+      </view>
+    </view>
+     <view class='cen foot'>
+      <view class='cen_top'>
+        <image src='../images/mgz.png'></image>
+        <text>免冠照</text>
+      </view>
+      <view class='cen_cen'>
+        <view class='photo'>
+        <block wx:for="{{photo_MG}}"  wx:key = "{{item}}">
+          <view class='photoZp'>
+            <image class='img' src='{{item}}' data-id='{{item}}' bindtap='FDimg'></image>
+            <image class='close'  data-id='{{item}}' bindtap='close_mgz' src='../images/close.png'></image>
+          </view>
+        </block>
+      </view>
+        <image class='tj_img' src='../images/tj_img.png'  bindtap='mgz'></image>
+      </view>
+    </view> 
+    <!--存储照片地址  -->
+    <input hidden='true' name="idCardFrontPic" value='{{photo}}'></input>
+    <input hidden='true' name="idCardBackPic" value='{{photo_F}}'></input>
+    <input hidden='true' name="avatarUrl" value='{{mgz}}'></input>
+    <button formType="submit" class='btn' type='primary'>提交</button>
+  </view>
+  
+</form>
+
+<view class='Img_mod' hidden='{{DImg_Hid}}' bindtap='smallImg'>
+  <view class='img_cen'>
+    <image src='{{Dimg}}'></image>
+    <icon type="clear" color='green' size="50"/>
+  </view>
+</view>
+

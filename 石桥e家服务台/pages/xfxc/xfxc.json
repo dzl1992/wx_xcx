@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "消防宣传",
+  "component": true,
+  "usingComponents": {
+    "txv-video": "plugin://tencentvideo/video"
+  }
+}

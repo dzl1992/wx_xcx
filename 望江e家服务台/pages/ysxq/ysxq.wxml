@@ -1,0 +1,58 @@
+<!--pages/tjys/tjys.wxml-->
+<view class='content'>
+  <view class='cot_top'>
+    <view class='top_index'>
+      <label>房东：</label>
+      <input disabled='false' value='{{obj.landlordName}}'></input>
+    </view>
+    <view class='top_index phone'>
+      <label>手机：</label>
+      <input disabled='false' value='{{obj.landlordPhone}}'></input>
+    </view>
+    <view class='top_index'>
+      <label>房屋位置：</label>
+      <textarea disabled='false' value='{{obj.address}}' auto-height='true'></textarea>
+    </view>
+  </view>
+  <view class='cot_cen'>
+    <view class='cot_cen_top'>
+      <view>
+        <image src='../images/xfss.png'></image>
+      </view>
+      <text>消防器材</text>
+    </view>
+    <view class='con_cen_cen'>
+      <checkbox-group bindchange="checkboxChange">
+        <label class="checkbox" wx:for="{{check}}"  wx:key="content">
+          <checkbox value="{{item.name}}" checked="{{item.checked}}"/>
+          <text>{{item.value}}</text>
+        </label>
+      </checkbox-group>
+    </view>
+  </view>
+  <view class='cot_foot'>
+    <view class='cot_foot_top'>
+      <image src='../images/xfss.png'></image>
+      <text>消防设施</text>
+    </view>
+    <view class='cot_foot_cen'>
+      <view class='photo'>
+        <block wx:for="{{obj.pics}}"  wx:key="item">
+          <view class='photoZp'>
+            <image class='img' src='{{item}}'></image>
+          </view>
+        </block>
+      </view>
+    </view>
+  </view>
+  <!-- <view class='cot_down'>
+    <view class='down_index'>
+      <label>审核结果：</label>
+      <view>通过</view>
+    </view>
+    <view class='down_index'>
+      <label>拒绝原因：</label>
+      <view>消防设备过少</view>
+    </view>
+  </view> -->
+</view>

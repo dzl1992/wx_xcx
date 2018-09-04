@@ -1,0 +1,427 @@
+/* pages/zsxq/zsxq.wxss */
+page {
+  width: 100%;
+  min-height: 100%;
+  background-color: #f7f6fc;
+ }
+.content {
+  width: 100%;
+  height: 100%;
+}
+.content0 {
+  width: 100%;
+  height: 100%;
+  padding-top: 32rpx;
+}
+.cot {
+  width: 100%;
+  height: auto;
+  background-color: #fff;
+  display: flex;
+  margin-bottom: 108rpx;
+}
+.cot0_top {
+  flex: 1;
+  width: 90%;
+  height: auto;
+  display: inline-block;
+  padding-bottom: 40rpx;
+}
+.cot_first {
+  width: 90%;
+  height: auto;
+  position: relative;
+}
+.tit {
+  width: 100%;
+  height: auto;
+  padding-left: 32rpx;
+  margin-top: 48rpx;
+  position: relative;
+  margin-bottom: 16rpx;
+}
+.tit > view {
+  width: 50%;
+  height: auto;
+  font-size: 32rpx;
+  font-weight: bold;
+  display: inline-block;
+}
+.tit > text {
+  width: auto;
+  height: auto;
+  font-size: 24rpx;
+  color: #999;
+  position: absolute;
+  top: 10rpx;
+  right: 20rpx;
+}
+.cot_Second {
+  width: 90%;
+  margin-top: 70rpx;
+}
+.cot_Second > view {
+  width: 100%;
+  height: auto;
+}
+.queren {
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  margin-left: 32rpx;
+  font-size: 28rpx;
+  color: #333;
+}
+.blue {
+  color: #3399ff;
+}
+.XGblue {
+  color: #3399ff;
+  font-size: 28rpx;
+  position: absolute;
+  right: 32rpx;
+}
+.green {
+  color: #20b920;
+}
+.red {
+  color: #ff3333;
+}
+.top_index {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+.top_index > label, .top_index > input {
+  display: inline-block;
+  height: 66rpx;
+  line-height: 66rpx;
+  font-size: 28rpx;
+  color: #333;
+}
+.top_index > label {
+  position: absolute;
+  left: 32rpx;
+}
+.top_index > input {
+  width: 500rpx;
+  margin-left: 120rpx;
+}
+.address {
+  padding-left: 50rpx;
+}
+.suo {
+  padding-left: 20rpx;
+}
+.top_index > text {
+  display: inline-block;
+  margin-top: 32rpx;
+  margin-bottom: -32rpx;
+  min-height: 96rpx;
+  width: 540rpx;
+  margin-left: 180rpx;
+  font-size: 28rpx;
+  color: #333;
+  overflow-y: hidden;
+  white-space: normal;
+  word-break:break-all;
+}
+::-webkit-scrollbar {  
+  width: 0;  
+  height: 0;  
+  color: transparent;  
+}  
+.phone > image {
+  width: 66rpx;
+  height: 66rpx;
+  position: absolute;
+  left: 300rpx;
+  top: 0;
+  z-index: 2;
+}
+.bj {
+  width: 48rpx;
+  height: 48rpx;
+  position: absolute;
+  right: 32rpx;
+  top: 12rpx;
+  z-index: 2;
+}
+.cot0_cen {
+  width: 100%;
+  height: 200rpx;
+  margin-top: 64rpx;
+}
+.cen_top {
+  width: 100%;
+  height: 32rpx;
+  padding-left: 32rpx;
+}
+.cen_top > image {
+  width: 32rpx;
+  height: 32rpx;
+  margin-right: 16rpx;
+}
+.cen_top > text{
+  font-size: 30rpx;
+  color: #333;
+}
+.cen_foot {
+  padding-left: 32rpx;
+  width: 100%;
+  height: 96rpx;
+  background-color: #fff;
+  /* border-top: 1rpx solid #e0e0e0; */
+  /* border-bottom: 1rpx solid #e0e0e0;  */
+}
+.cen_foot > radio-group {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  line-height: 96rpx;
+  position: relative;
+}
+.cen_foot > radio-group > label {
+  margin-right: 200rpx;
+  font-size: 28rpx;
+  position: relative;
+}
+.cen_foot > radio-group > label > text{
+  width: 60rpx;
+  height: 40rpx; 
+  display: inline-block;
+  position: absolute;
+  top: -24rpx; 
+}
+radio {
+  zoom: 70%;
+}
+.sbyy {
+  width: 100%;
+  height: 100rpx;
+  background-color: #fff;
+  position: relative;
+  padding-left: 32rpx;
+  margin-top: -70rpx;
+}
+.forth_sbyy {
+  margin-top: -70rpx;
+}
+.suojiang {
+  width: 100%;
+  height: auto;
+  background-color: #fff;
+  margin-top: -38rpx;
+  margin-bottom: 200rpx;
+  position: relative;
+  border-top: 1rpx solid #e0e0e0;
+}
+.suojiang > view {
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  border-bottom: 1rpx solid #e0e0e0;
+  font-size: 28rpx;
+  padding-left: 32rpx;
+  position: relative;
+}
+.suojiang > view > input {
+  width: 80%;
+  height: 100%;
+  position: absolute;
+   top: 0rpx; 
+  left: 110rpx;
+}
+.sbyy > label{
+  font-size: 30rpx;
+  line-height: 100rpx;
+  color: #333;
+  font-weight: bold;
+  position: absolute;
+}
+.sbyy > input {
+  display: inline-block;
+  width: 80%;
+  height: 90%;
+  margin-left: 20%;
+}
+.content0 > button {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  border: none;
+}
+.cot1_cen {
+  margin-top: 32rpx;
+  background-color: #fff;
+}
+.sb_btn {
+  width: 100%;
+  position: absolute;
+  height: 100rpx;
+  z-index:2;
+}
+.sb_cxsb {
+  margin-top: 60rpx;
+}
+.cot_Thired {
+  width: 90%;
+  margin-top: 60rpx;
+}
+.queren_index {
+  width: 100%;
+  height: 50rpx;
+  line-height: 50rpx;
+  font-size: 28rpx;
+  padding-left: 32rpx;
+  position: relative;
+}
+.queren_index > image {
+  position: absolute;
+  width: 100rpx;
+  height: 100rpx;
+  top: -24rpx;
+}
+.cot_Fourth {
+  width: 90%;
+  margin-top: -14rpx;
+}
+.cot_foot {
+  width: 100%;
+  height: auto;
+  margin-top: 64rpx;
+  margin-bottom: 100rpx;
+}  
+.cot_foot_top {
+  width: 100%;
+  height: 40rpx;
+  padding-left: 32rpx;
+}
+.cot_foot_top > image {
+  width: 32rpx;
+  height: 32rpx;
+}
+.cot_foot_top > text {
+  font-size: 30rpx;
+}
+.btn {
+  position: fixed;
+  bottom: 100rpx;
+  left: 4.5%;
+  width: 91.11%;
+}
+.cot_foot_cen {
+  width: 100%;
+  height: auto;
+  line-height: 100rpx;
+  background-color: #fff;
+  margin-top: 20rpx;
+  padding-left: 32rpx;
+  position: relative;
+}
+.tj_img {
+  width: 148rpx;
+  height: 148rpx;
+  margin-top: 20rpx;
+}
+.photo {
+  width: auto;
+  height: auto;
+  display: inline-block;
+}
+.photoZp {
+  display: inline-block;
+  width: 148rpx;
+  height: 148rpx;
+  margin-top: 20rpx;  
+  margin-right: 16rpx;
+  position: relative;
+}
+.img { 
+  width: 100%;
+  height: 100%;
+}
+.close {
+  position: absolute;
+  width: 32rpx;
+  height: 32rpx;
+  border-radius: 50rpx;
+  top: -16rpx;
+  right: -16rpx;
+}
+
+
+
+
+
+
+/*进度条内容  */
+.steps {
+  flex: 1;
+  width: 6%;
+  height: auto;
+  font-size: 28rpx;
+}
+.steps > .first, .Second, .Third, .Fourth {
+  width: 100%;
+  text-align: right;
+  position: relative;
+}
+.first {
+  height: 580rpx;
+}
+.Second {
+  height: 200rpx;
+}
+.Third {
+  
+}
+.Fourth {
+  
+}
+.Third > view, .Second > view {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.first_box {
+  margin-top: 60rpx;
+  width: 32rpx;
+  height: 32rpx;
+}
+.first_line {
+  width: 1px;
+  height: 90%;
+  background-color: #67c23a;
+  position: absolute;
+  right: 16rpx;
+  top: 90rpx;
+}
+.Second_box21, .Second_box22, .Third_box21, .Third_box22 {
+  width: 32rpx;
+  height: 32rpx;
+}
+.Second_box21 + text, .Third_box21 +text {
+  color: #67c23a;
+}
+.Second_box22 + text, .Third_box22 + text {
+  color: #999;
+}
+.Second_line21, .Second_line22, .Third_line21, .Third_line22 {
+  width: 1px;
+  height: 90%;
+  position: absolute;
+  right: 16rpx;
+  top: 20rpx;
+}
+.Second_line21, .Third_line21 {
+  background-color: #67c23a;
+}
+.Second_line22, .Third_line22 {
+  background-color: #999;
+}
+.icon3 {
+  position: absolute;
+  bottom: -90rpx;
+  left: 0rpx;
+}

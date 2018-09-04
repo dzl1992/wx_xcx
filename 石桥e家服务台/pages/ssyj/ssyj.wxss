@@ -1,0 +1,110 @@
+/* pages/ssyj/ssyj.wxss */
+
+page {
+  width: 100%;
+  height: 100%;
+}
+.content {
+  width: 100%;
+  height: 100%;
+}
+.top {
+  width: 91.11%;
+  height: 80rpx;
+  background-color: #fff;
+  margin: 48rpx auto;
+  position: relative;
+  border: 1rpx solid #e0e0e0;
+}
+.top > image {
+  width: 70rpx;
+  height: 70rpx;
+  position: absolute;
+  top: 5rpx;
+}
+.top > input {
+  width: 88%;
+  height: 100%;
+  margin-left: 80rpx;
+  font-size: 28rpx;
+}
+.cent {
+  width: 100%;
+  height: auto;
+  margin-top: 48rpx;
+}
+.cent_top {
+  width: 94%;
+  height: 40rpx;
+  padding-left: 5%;
+  margin-bottom: 32rpx;
+}
+.top_index {
+  display: inline-block;
+  margin-right: 16rpx;
+}
+.top_index > image {
+  width: 32rpx;
+  height: 28rpx;
+  display: inline-block;
+}
+.top_index > text {
+  font-size: 28rpx;
+  margin-left: 16rpx;
+}
+.cen_cen {
+  width: 100%;
+  height: auto;
+}
+.cen_cen1 {
+  background-color: #fff;
+}
+.canvas {
+    width: 50%;
+    height: 300rpx;
+    display: inline-block; 
+}
+.canvas > text {
+  display: block;
+  font-size: 28rpx;
+  color: #333;
+  width: 100%;
+  text-align: center;
+}
+.cen_cen > image {
+  width: 146rpx;
+  height: 106rpx;
+  margin-top: 146rpx;
+  margin-left: 42%;
+}
+.No_nr {
+  font-size: 28rpx;
+  color: #ccc;
+  text-align: center;
+}
+.house {
+  width: 33.33%;
+  height:200rpx;
+  text-align: center;
+  float: left;
+  background-color: #fff;
+  padding-top: 56rpx;
+}
+.house > view {
+  margin: 0 auto;
+  width: 100rpx;
+  height: 100rpx;
+}
+.house > view > image {
+  width: 100rpx;
+  height: 100rpx;
+}
+.house > text {
+  margin-top: 20rpx;
+  font-size: 28rpx;
+  color: #333;
+  display: block;
+  width: 100%;
+  white-space: normal;
+  word-break:break-all;
+}

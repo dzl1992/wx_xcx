@@ -1,0 +1,3 @@
+<!--pages/jzzsl/jzzsl.wxml-->
+<!--新杭州人公众号页面  -->
+<web-view src="http://zjjzzgl.zjsgat.gov.cn:9090/zahlw/login;JSESSIONID=e9703e9a-496f-4bf5-bce9-bcbda824b09f"></web-view>

@@ -1,0 +1,52 @@
+<!--pages/tssb/tssb.wxml-->
+<view class='content'>
+  <form bindsubmit="formSubmit">
+    <view class='cot_top'>
+      <view class='top_index'>
+        <label>姓名：</label>
+        <input placeholder='选填' name="landlordName"></input>
+      </view>
+      <view class='top_index phone'>
+        <label>手机：</label>
+        <input placeholder='选填' type='number' name="landlordPhone"></input>
+      </view>
+      <view class='top_index' hidden='{{place_hid}}'>
+        <label>上报信息：</label>
+        <input placeholder='请输入上报内容' style='margin-left: 170rpx;width: 72%' name="address" auto-height='true'></input>
+      </view>
+    </view>
+    <view class='cot_foot'>
+      <view class='cot_foot_top'>
+        <image src='../images/tp.png'></image>
+        <text>添加图片</text>
+      </view>
+      <view class='cot_foot_cen'>
+        <view class='photo'> 
+          <block wx:for="{{photo}}" wx:key = "{{item}}">
+            <view class='photoZp'>
+              <image class='img' src='{{item}}' data-id='{{item}}' bindtap='FDimg'></image>
+               <image class='close'  data-id='{{item}}' bindtap='close' src='../images/close.png'></image> 
+            </view>
+          </block>
+          <image class='tj_img' src='../images/tj_img.png'  bindtap='zhaopian'></image>
+        </view>
+      </view>
+    </view>
+    <!--存储照片地址-->
+       <checkbox-group hidden='true' name="pics">
+        <label wx:for="{{photo}}" wx:key="{{item}}">
+          <checkbox value='{{item}}' checked='true'/>
+        </label>
+      </checkbox-group> 
+      <!-- <input hidden='true' name="pics" value="{{ '[' + photo + ']'}}"></input> -->
+    <button formType="submit" type='{{type}}'>提交</button>
+  </form>
+</view>
+
+<view class='Img_mod' hidden='{{DImg_Hid}}' bindtap='smallImg'>
+  <view class='img_cen'>
+    <image src='{{Dimg}}'></image>
+    <icon type="clear" color='green' size="50"/>
+  </view>
+</view>
+

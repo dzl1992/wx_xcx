@@ -1,0 +1,7 @@
+<!--pages/tssb/tssb.wxml-->
+<view class='content'>
+  <image src='../images/No_w.png'></image>
+  <view>案例正在搜集中...</view>
+</view>
+
+

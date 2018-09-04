@@ -1,0 +1,2 @@
+<!-- <web-view src="https://v.qq.com/x/page/z0382bxt0w1.html"></web-view>    -->
+<txv-video class='video' vid="z0382bxt0w1" playerid="txv1" autoplay="{{true}}"></txv-video>

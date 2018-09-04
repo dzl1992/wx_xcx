@@ -1,0 +1,16 @@
+<!--pages/aqgd/aqgd.wxml-->
+<view class='cot0_top'>
+  <view class='top_index' bindtap='xiangfangyaoqiu'>
+    <label>浙江省居住房屋安全消防要求</label>
+    <image src='../images/icon_arrow_right.png'></image>
+  </view>
+  <view class='top_index' bindtap='rggd'>
+    <label>杭州市居住房屋出租房安全若干规定</label>
+    <image src='../images/icon_arrow_right.png'></image>
+  </view>
+  <view class='top_index' bindtap='glgd'>
+    <label>杭州市房屋租赁管理规定</label>
+    <image src='../images/icon_arrow_right.png'></image>
+  </view>
+</view>
+

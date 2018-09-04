@@ -1,0 +1,32 @@
+<!--pages/sjdp/sjdp.wxml-->
+<view class='content'>
+  <view class='top'>
+    <image src='../images/B_search.png'></image>
+    <input bindinput='xq_name'></input>
+  </view>
+  <view class='search' bindtap='search'>搜索</view>
+  <view class='cent'>
+    <view class='cent_top'>
+      <view class='top_index'>
+        <view class='yes'></view>
+        <text>已安装</text>
+      </view>
+      <view class='top_index'>
+        <view class='no'></view>
+        <text>未安装</text>
+      </view>
+    </view>
+    <view class='cen_cen' hidden='{{Yes_hid}}'>
+      <block wx:for="{{dataInfo}}" wx:for-item="data"  wx:key="content" >
+        <view class='canvas'>
+          <canvas canvas-id="ringGraph{{ data.id }}"></canvas>
+          <text>{{ data.name }}</text>
+        </view>
+      </block> 
+    </view>
+    <view class='cen_cen' hidden='{{NO_hid}}'>
+      <image src='../images/No_w.png'></image>
+      <view class='No_nr'>没有相关内容</view>
+    </view>
+  </view>
+</view>
